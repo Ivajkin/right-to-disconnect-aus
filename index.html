@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Australia's Right to Disconnect Law</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         
@@ -115,50 +115,67 @@
             display: none;
         }
     </style>
+    <meta name="description" content="Learn about Australia's Right to Disconnect Law and its impact on work-life balance. Interactive presentation on reducing work-related stress and improving well-being.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Australia's Right to Disconnect Law",
+      "description": "Learn about Australia's Right to Disconnect Law and its impact on work-life balance. Interactive presentation on reducing work-related stress and improving well-being.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Your Organization Name"
+      }
+    }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div id="personalization">
+    <main class="container">
+        <section id="personalization">
             <h2>Welcome to the Right to Disconnect Experience</h2>
             <p>Enter your name to personalize this presentation:</p>
             <input type="text" id="name-input" placeholder="Your name">
             <button id="start-btn">Start</button>
-        </div>
+        </section>
 
-        <div id="main-content" class="hidden">
+        <section id="main-content" class="hidden">
             <h1>Australia's Right to Disconnect Law</h1>
             <p>Hello, <span id="user-name"></span>! Let's explore this groundbreaking law.</p>
 
-            <div class="icon-container">
+            <section class="icon-container">
                 <div class="icon">📱</div>
                 <div class="icon">❌</div>
                 <div class="icon">🏠</div>
-            </div>
+            </section>
 
-            <div id="benefits">
-                <div class="benefit">Improves work-life balance</div>
-                <div class="benefit">Reduces unpaid labor</div>
-                <div class="benefit">Enhances overall well-being</div>
-                <div class="benefit">Prevents employer overreach</div>
-            </div>
+            <section id="benefits">
+                <article class="benefit">Improves work-life balance</article>
+                <article class="benefit">Reduces unpaid labor</article>
+                <article class="benefit">Enhances overall well-being</article>
+                <article class="benefit">Prevents employer overreach</article>
+            </section>
 
-            <h2>Impact on Work-Related Stress</h2>
-            <div id="chart-container">
-                <canvas id="stress-chart"></canvas>
-            </div>
+            <section>
+                <h2>Impact on Work-Related Stress</h2>
+                <div id="chart-container">
+                    <canvas id="stress-chart"></canvas>
+                </div>
+            </section>
 
-            <h2>Interactive Scenario</h2>
-            <div class="scenario">
-                <h3>After-Hours Work Message</h3>
-                <p>It's 8 PM and you receive an urgent work email. What do you do?</p>
-                <button class="choice-btn" data-stress="70">Respond Immediately</button>
-                <button class="choice-btn" data-stress="30">Wait Until Tomorrow</button>
-                <div id="result"></div>
-            </div>
+            <section>
+                <h2>Interactive Scenario</h2>
+                <article class="scenario">
+                    <h3>After-Hours Work Message</h3>
+                    <p>It's 8 PM and you receive an urgent work email. What do you do?</p>
+                    <button class="choice-btn" data-stress="70">Respond Immediately</button>
+                    <button class="choice-btn" data-stress="30">Wait Until Tomorrow</button>
+                    <div id="result"></div>
+                </article>
+            </section>
 
             <button id="reset-btn">Reset Experience</button>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <script>
         const nameInput = document.getElementById('name-input');
